@@ -1,0 +1,93 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  background-color: rgb(36, 32, 46);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1{
+  color: rgb(204, 157, 206) ;
+  text-align: center;
+}
+
+.container{
+  color: aliceblue;
+  display: flex;
+  gap:10px;
+  margin: 10px;
+  font-size: 20px;
+  
+}
+button{
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 15px;
+  color: aliceblue;
+  background-color: rgb(120, 72, 105);
+  border: none;
+  cursor: pointer;
+  margin: 15px;
+
+}
+
+button:hover{
+  background-color: rgb(175, 121, 158);
+
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:15px;
+}
+.flower-container {
+  position: relative;
+  width: 100px; /* Adjust the width as needed */
+  height: 100px; /* Adjust the height as needed */
+}
+
+.flower {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100px; /* Adjust the width as needed */
+  height:100px ;
+  background: url('../src/assets/flower.png') center center no-repeat;
+  background-size: 100%; 
+  animation: flowerAnimation 1s ease-in-out;
+}
+
+@keyframes flowerAnimation {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px);
+    visibility: hidden;  }
+}
+
+@media (max-width:600px)
+{
+  .container{
+    
+    font-size: 15px;
+  }
+
+}
